@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>JDEVS</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(event){
+        // array with texts to type in typewriter
+        // var dataText = [ "HELLO WORLD!"];
+        var dataText = [ "I AM JOANNA"];
+
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+            // add next character to h1
+            document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+            // wait for a while and call this function again for next character
+            setTimeout(function() {
+                typeWriter(text, i + 1, fnCallback)
+            }, 200);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+            // call callback after timeout
+            setTimeout(fnCallback, 100);
+            }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+            if (typeof dataText[i] == 'undefined'){
+                setTimeout(function() {
+                StartTextAnimation(0);
+                }, 20000);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+            // text exists! start typewriter animation
+            typeWriter(dataText[i], 0, function(){
+            // after callback (and whole text has been animated), start next text
+            StartTextAnimation(i + 1);
+            });
+            }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+
+});
+
+    </script>
+</head>
+<body class="bg-zinc-950">
+    <header class="">
+        <div class="">
+            <div class="fixed top-0 w-full bg-gray-900 bg-zinc-950">
+                <div class="pl-4 pt-4 flex items-center">
+                    <img src="../imgs/hashtag.png" class="w-14 inline-flex" alt="">
+                    <div class="ml-2">
+                    <!-- w-fit rounded-lg bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 -->
+                        <p class="text-[200%] px-4 -ml-4 text-red-50 rounded-lg font-bold">JDEVS</p>
+                    </div>
+                </div>
+                <div class="relative items-center">
+                    <nav class="flex justify-center relative py-3 sm:max-w-xl sm:mx-auto -mt-[3%]">
+                        <ul class="flex items-center gap-28 text-xl">
+                            <li><a class="text-red-50 hover:text-gold" href="#home">Home</a></li>
+                            <li><a class="text-red-50 hover:text-gold" href="#about">About</a></li> 
+                            <li><a class="text-red-50 hover:text-gold" href="#projects">Projects</a></li> 
+                            <li><a class="text-red-50 hover:text-gold" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- ABSTRACT IMAGES -->
+        <div>
+            <!-- <img src="../imgs/circle.png" class="w-32 flex absolute right-0 top-2/4 bottom-3/4 mr-80 transition-transform duration-300 transform hover:scale-110" alt=""> -->
+            <img src="../imgs/loop.png" class="w-80 flex absolute m-auto top-28 right-0 mr-12 transition-transform duration-300 transform hover:scale-110" alt="">
+            <!-- <img src="../imgs/circle.png" class="w-[13%] flex absolute m-auto right-96 top-[30%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt=""> -->
+            <img src="../imgs/cylindar.png" class="w-[20%] flex absolute m-auto right-96 top-[25%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt="">
+            <img src="../imgs/loop3.png" class="w-[20%] flex absolute m-auto right-96 top-[42%] mr-[16%] transition-transform duration-300 transform hover:scale-110" alt="">
+            <!-- <img src="../imgs/loop1.png" class="flex absolute top-[60%] ml-[15%] mt-8 transition-transform duration-300 transform hover:scale-110" alt=""> -->
+            <img src="../imgs/cylindar1.png" class="w-48 flex absolute top-[58%] ml-[15%] mt-8 transition-transform duration-300 transform hover:scale-110" alt="">
+            <img src="../imgs/x.png" class="w-36 flex absolute top-[68%] ml-[11%] transition-transform duration-300 transform hover:scale-110" alt="">
+            <img src="../imgs/x.png" class="w-52 flex absolute top-[66%] right-0 mr-[8%] transition-transform duration-300 transform hover:scale-110" alt="">
+            <img src="../imgs/loop4.png" class="w-32 flex opacity-75 absolute top-44 ml-[36%] transition-transform duration-300 transform hover:scale-110" alt="">
+        </div>
+
+        <!-- NAME INTRO -->
+        <div class="mt-24">
+            <div class=" helloWolrd text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-bold">
+                Hello World!
+            </div>
+            <div class="text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-mono">
+                <h1>I am Joanna</h1>
+            </div>
+            <div class="ml-[5.5%] absolute flex rounded top-[50%] transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+                <div class="w-fit rounded bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+                    <div class="text-[#f6f6f6] bg-zinc-950 w-fit px-8 py-2 rounded m-[1px] font-mono">VIEW PORTFOLIO</div>
+                </div>
+            </div>
+    </header>
+
+
+</body>
+</html>
