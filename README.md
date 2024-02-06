@@ -1,6 +1,6 @@
 # JoannaJuanicoPortfolio
 To be able to view my portfolio you need to do the following:
->> Clone this portfolio
+>> Clone this portfolio in your cmd
   "git clone https://github.com/juanico637/joannaportfolio.git"
 >> Go to cloned path
   "cd joannaportfolio"
