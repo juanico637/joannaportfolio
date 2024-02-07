@@ -1,5 +1,13 @@
 # JoannaJuanicoPortfolio
-To run: "npm run dev"
+To be able to view my portfolio you need to do the following:
+>> Clone this portfolio in your cmd
+  "git clone https://github.com/juanico637/joannaportfolio.git"
+>> Go to cloned path
+  "cd joannaportfolio"
+>> Open in VSCODE
+  "code ."
+>> Run the npm
+  "npm run dev"
 
 
 title: My Portfolio
