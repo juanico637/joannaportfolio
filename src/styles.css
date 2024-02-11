@@ -24,3 +24,38 @@ span {
 .helloWolrd{
     color: white;
 }
+nav li {
+    position: relative; /* Ensure the relative positioning for the pseudo-element */
+}
+
+nav li:hover::after {
+    content: ''; /* Add pseudo-element content */
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust the position to be just below the text */
+    width: 100%;
+    height: 2px; /* Set the height of the underline */
+    background-image: linear-gradient(to right, #fb7185, #d946ef, #6366f1); /* Gradient colors */
+}
+
+.line {
+    height: 300px;
+    position: absolute;
+    top: 80%;
+    left: 98%;
+    border-left: 1px solid;
+    border-image: linear-gradient(to bottom, #fb7185, #d946ef, #6366f1); /* Adjust colors as needed */
+    border-image-slice: 1;
+    margin-top: 1.8rem;
+}
+.about-me {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.about-me.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
