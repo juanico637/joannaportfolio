@@ -58,4 +58,6 @@ nav li:hover::after {
     opacity: 1;
     transform: translateY(0);
 }
-
+.about_me_hover:hover{
+    
+}
