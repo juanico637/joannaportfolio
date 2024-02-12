@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="/src/style.css">
     <title>JDEVS</title>
 
+    <style>
+        .expertise-section {
+        opacity: 0;
+        transform: translateY(80px);
+        transition: opacity 1.5s, transform 3.5s;
+        will-change: opacity, transform;
+        }
+        
+        .expertise-section.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
     <script>
         document.addEventListener('DOMContentLoaded',function(event){
         // array with texts to type in typewriter
@@ -84,7 +98,7 @@
                     <nav class="flex justify-center py-3 sm:max-w-xl sm:mx-auto -mt-[3%]">
                         <ul class="flex items-center gap-36 text-xl">
                             <li><a class="text-red-50" href="#home">Home</a></li>
-                            <li><a class="text-red-50" href="#about">About</a></li> 
+                            <li><a class="text-red-50" href="#about_me">About</a></li> 
                             <li><a class="text-red-50" href="#projects">Projects</a></li> 
                             <li><a class="text-red-50" href="#contact">Contact</a></li>
                         </ul>
@@ -92,148 +106,258 @@
                 </div>
             </div>
         </div>
+    </header>
         
         <!-- ABSTRACT IMAGES -->
-        <div class="">
+        <section id="home" data-name="home">
             <div class="">
-                <img src="../imgs/circle.png" class="w-32 flex absolute right-0 top-2/4 bottom-3/4 mr-80 transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/loop.png" class="w-80 flex absolute m-auto top-28 right-0 mr-12 transition-transform duration-300 transform hover:scale-110" alt="">
-                <!-- <img src="../imgs/circle.png" class="w-[13%] flex absolute m-auto right-96 top-[30%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt=""> -->
-                <img src="../imgs/cylindar.png" class="w-[20%] flex absolute m-auto right-96 top-[25%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/loop3.png" class="w-[20%] flex absolute m-auto right-96 top-[42%] mr-[16%] transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/loop1.png" class="w-56 flex absolute top-[65%] ml-[25%] mt-8 transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/cylindar1.png" class="w-48 flex absolute top-[58%] ml-[6%] mt-8 transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/x.png" class="w-36 flex absolute top-[68%] ml-[3%] transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/x.png" class="w-52 flex absolute top-[66%] right-0 mr-[8%] transition-transform duration-300 transform hover:scale-110" alt="">
-                <img src="../imgs/loop4.png" class="w-32 flex opacity-75 absolute top-44 ml-[36%] transition-transform duration-300 transform hover:scale-110" alt="">
+                <div class="">
+                    <img src="../imgs/circle.png" class="w-32 flex absolute right-0 top-2/4 bottom-3/4 mr-80 transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/loop.png" class="w-80 flex absolute m-auto top-28 right-0 mr-12 transition-transform duration-300 transform hover:scale-110" alt="">
+                    <!-- <img src="../imgs/circle.png" class="w-[13%] flex absolute m-auto right-96 top-[30%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt=""> -->
+                    <img src="../imgs/cylindar.png" class="w-[20%] flex absolute m-auto right-96 top-[25%] mr-[10%] transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/loop3.png" class="w-[20%] flex absolute m-auto right-96 top-[42%] mr-[16%] transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/loop1.png" class="w-56 flex absolute top-[65%] ml-[25%] mt-8 transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/cylindar1.png" class="w-48 flex absolute top-[58%] ml-[6%] mt-8 transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/x.png" class="w-36 flex absolute top-[68%] ml-[3%] transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/x.png" class="w-52 flex absolute top-[66%] right-0 mr-[8%] transition-transform duration-300 transform hover:scale-110" alt="">
+                    <img src="../imgs/loop4.png" class="w-32 flex opacity-75 absolute top-44 ml-[36%] transition-transform duration-300 transform hover:scale-110" alt="">
+                </div>
             </div>
-        </div>
-        
+            
 
-        <!-- NAME INTRO -->
-        <div class="mt-24">
-            <div class=" helloWolrd text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-bold">
-                Hello World!
-            </div>
-            <div class="text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-mono">
-                <h1>I am Joanna</h1>
-            </div>
-            <div class="text-yellow-50 relative flex m-auto ml-24 pl-2 top-44">
-                A Web / Mobile Developer & Designer | Photo & Video Editor
-            </div>
-            <div class="ml-[5.5%] relative flex w-fit m-auto rounded top-44 pt-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer">
-                <a href="https://drive.google.com/file/d/13WFvr881adlN5TXZFs8CLD89hw2VYsW_/view?usp=drive_link" target="_blank">
-                    <div class="rounded bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
-                        <div class="text-[#f6f6f6] p-[1px] rounded m-[1px] font-mono">
-                            <div class="bg-zinc-950 px-12 py-2">VIEW RESUME</div>
+            <!-- NAME INTRO -->
+            <div class="mt-24">
+                <div class=" helloWolrd text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-bold">
+                    Hello World!
+                </div>
+                <div class="text-yellow-50 relative flex m-auto text-8xl ml-24 top-44 font-mono">
+                    <h1>I am Joanna</h1>
+                </div>
+                <div class="text-yellow-50 relative flex m-auto ml-24 pl-2 top-44">
+                    A Web / Mobile Developer & Designer | Photo & Video Editor
+                </div>
+                <div class="ml-[5.5%] relative flex w-fit m-auto rounded top-44 pt-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <a href="https://drive.google.com/file/d/13WFvr881adlN5TXZFs8CLD89hw2VYsW_/view?usp=drive_link" target="_blank">
+                        <div class="rounded bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+                            <div class="text-[#f6f6f6] p-[1px] rounded m-[1px] font-mono">
+                                <div class="bg-zinc-950 px-12 py-2">VIEW RESUME</div>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <!-- SOCIAL MEDIA -->
-            <div class="flex justify-end m-auto mr-6 relative top-64 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
-                <a class="flex" href="https://www.facebook.com/joannamariejuanico19" target="_blank">
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 32 32" version="1.1">
-                            <defs>
-                                <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="12%" stop-color="#fb7185" />
-                                    <stop offset="50%" stop-color="#d946ef" />
-                                    <stop offset="90%" stop-color="#6366f1"/>
-                                </linearGradient>
-                            </defs>
-                            <title>Facebook</title>
-                            <path fill="url(#gradient)" d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <div class="flex justify-end m-auto mr-6 relative top-64 mt-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
-                <a href="https://www.instagram.com/jo_designes/" target="_blank">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
-                            <defs>
-                                <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="12%" stop-color="#fb7185" />
-                                    <stop offset="50%" stop-color="#d946ef" />
-                                    <stop offset="90%" stop-color="#6366f1"/>
-                                </linearGradient>
-                            </defs>
-                            <title>Instagram</title>
-                            <path fill="url(#gradient)" clip-rule="evenodd" d="M7.46494 1.066C8.63828 1.01222 9.01228 1 12 1C14.9883 1 15.3617 1.01283 16.5344 1.066C17.7059 1.11917 18.5059 1.30556 19.2056 1.5775C19.9395 1.85381 20.6043 2.28674 21.1538 2.84617C21.7133 3.3956 22.1463 4.06046 22.4225 4.79439C22.6944 5.49411 22.8802 6.29406 22.934 7.46494C22.9878 8.63828 23 9.01228 23 12C23 14.9877 22.9872 15.3617 22.934 16.5351C22.8808 17.7059 22.6944 18.5059 22.4225 19.2056C22.1414 19.9286 21.7649 20.5427 21.1538 21.1538C20.6044 21.7133 19.9395 22.1463 19.2056 22.4225C18.5059 22.6944 17.7059 22.8802 16.5351 22.934C15.3617 22.9878 14.9877 23 12 23C9.01228 23 8.63828 22.9872 7.46494 22.934C6.29406 22.8808 5.49411 22.6944 4.79439 22.4225C4.07144 22.1414 3.45728 21.7649 2.84617 21.1538C2.28664 20.6044 1.85368 19.9395 1.5775 19.2056C1.30556 18.5059 1.11978 17.7059 1.066 16.5351C1.01222 15.3617 1 14.9883 1 12C1 9.01167 1.01283 8.63828 1.066 7.46556C1.11917 6.29406 1.30556 5.49411 1.5775 4.79439C1.85381 4.06051 2.28674 3.39568 2.84617 2.84617C3.39559 2.28664 4.06045 1.85368 4.79439 1.5775C5.49411 1.30556 6.29406 1.11978 7.46494 1.066ZM16.4452 3.046C15.2853 2.99344 14.937 2.98183 12 2.98183C9.063 2.98183 8.71467 2.99344 7.55478 3.046C6.48228 3.09489 5.89989 3.27394 5.51244 3.42489C4.99911 3.62411 4.63244 3.86244 4.24744 4.24744C3.86306 4.63244 3.62411 4.99911 3.42489 5.51244C3.27394 5.89989 3.09489 6.48228 3.046 7.55478C2.99344 8.71467 2.98183 9.063 2.98183 12C2.98183 14.937 2.99344 15.2853 3.046 16.4452C3.09489 17.5177 3.27394 18.1001 3.42489 18.4876C3.60111 18.9654 3.88219 19.3976 4.24744 19.7526C4.60234 20.1178 5.03461 20.3989 5.51244 20.5751C5.89989 20.7261 6.48228 20.9051 7.55478 20.954C8.71467 21.0066 9.06239 21.0182 12 21.0182C14.9376 21.0182 15.2853 21.0066 16.4452 20.954C17.5177 20.9051 18.1001 20.7261 18.4876 20.5751C19.0009 20.3759 19.3676 20.1376 19.7526 19.7526C20.1178 19.3977 20.3989 18.9654 20.5751 18.4876C20.7261 18.1001 20.9051 17.5177 20.954 16.4452C21.0066 15.2853 21.0182 14.937 21.0182 12C21.0182 9.063 21.0066 8.71467 20.954 7.55478C20.9051 6.48228 20.7261 5.89989 20.5751 5.51244C20.3759 4.99911 20.1376 4.63244 19.7526 4.24744C19.3676 3.86306 19.0009 3.62411 18.4876 3.42489C18.1001 3.27394 17.5177 3.09489 16.4452 3.046ZM10.5955 15.3909C11.0408 15.5754 11.518 15.6703 12 15.6703C12.9735 15.6703 13.907 15.2836 14.5953 14.5953C15.2837 13.907 15.6704 12.9734 15.6704 12C15.6704 11.0266 15.2837 10.093 14.5953 9.40468C13.907 8.71636 12.9735 8.32966 12 8.32966C11.518 8.32966 11.0408 8.4246 10.5955 8.60905C10.1501 8.7935 9.74553 9.06385 9.40471 9.40468C9.06389 9.7455 8.79353 10.1501 8.60908 10.5954C8.42463 11.0407 8.3297 11.518 8.3297 12C8.3297 12.482 8.42463 12.9593 8.60908 13.4046C8.79353 13.8499 9.06389 14.2545 9.40471 14.5953C9.74553 14.9361 10.1501 15.2065 10.5955 15.3909ZM8.00205 8.00201C9.06238 6.94168 10.5005 6.34599 12 6.34599C13.4996 6.34599 14.9377 6.94168 15.998 8.00201C17.0583 9.06234 17.654 10.5005 17.654 12C17.654 13.4995 17.0583 14.9376 15.998 15.998C14.9377 17.0583 13.4996 17.654 12 17.654C10.5005 17.654 9.06238 17.0583 8.00205 15.998C6.94172 14.9376 6.34603 13.4995 6.34603 12C6.34603 10.5005 6.94172 9.06234 8.00205 8.00201ZM18.9077 7.18838C19.1583 6.93773 19.2991 6.59779 19.2991 6.24333C19.2991 5.88886 19.1583 5.54892 18.9077 5.29828C18.657 5.04764 18.3171 4.90683 17.9626 4.90683C17.6082 4.90683 17.2682 5.04764 17.0176 5.29828C16.7669 5.54892 16.6261 5.88886 16.6261 6.24333C16.6261 6.59779 16.7669 6.93773 17.0176 7.18838C17.2682 7.43902 17.6082 7.57983 17.9626 7.57983C18.3171 7.57983 18.657 7.43902 18.9077 7.18838Z" fill="#000000"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <div class="flex justify-end m-auto mr-6 relative top-64 mt-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
-                <a href="https://github.com/juanico637" target="_blank">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 48 48">
-                            <defs>
-                                <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="12%" stop-color="#fb7185" />
-                                    <stop offset="50%" stop-color="#d946ef" />
-                                    <stop offset="90%" stop-color="#6366f1"/>
-                                </linearGradient>
-                            </defs>
-                            <title>Github</title>
-                            <g id="Layer_2" data-name="Layer 2">
-                            <g id="invisible_box" data-name="invisible box">
-                                <rect width="48" height="48" fill="none"/>
-                                <rect width="48" height="48" fill="none"/>
-                            </g>
-                            <g id="icons_Q2" data-name="icons Q2">
-                                <path fill="url(#gradient)" d="M24,1.9a21.6,21.6,0,0,0-6.8,42.2c1,.2,1.8-.9,1.8-1.8V39.4c-6,1.3-7.9-2.9-7.9-2.9a6.5,6.5,0,0,0-2.2-3.2C6.9,31.9,9,32,9,32a4.3,4.3,0,0,1,3.3,2c1.7,2.9,5.5,2.6,6.7,2.1a5.4,5.4,0,0,1,.5-2.9C12.7,32,9,28,9,22.6A10.7,10.7,0,0,1,11.9,15a6.2,6.2,0,0,1,.3-6.4,8.9,8.9,0,0,1,6.4,2.9,15.1,15.1,0,0,1,5.4-.8,17.1,17.1,0,0,1,5.4.7,9,9,0,0,1,6.4-2.8,6.5,6.5,0,0,1,.4,6.4A10.7,10.7,0,0,1,39,22.6C39,28,35.3,32,28.5,33.2a5.4,5.4,0,0,1,.5,2.9v6.2a1.8,1.8,0,0,0,1.9,1.8A21.7,21.7,0,0,0,24,1.9Z"/>
-                            </g>
-                            </g>
-                        </svg>
-                    </div>
-                </a>
-            </div>
+                <!-- SOCIAL MEDIA -->
+                <div class="flex justify-end m-auto mr-6 relative top-64 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
+                    <a class="flex" href="https://www.facebook.com/joannamariejuanico19" target="_blank">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 32 32" version="1.1">
+                                <defs>
+                                    <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="12%" stop-color="#fb7185" />
+                                        <stop offset="50%" stop-color="#d946ef" />
+                                        <stop offset="90%" stop-color="#6366f1"/>
+                                    </linearGradient>
+                                </defs>
+                                <title>Facebook</title>
+                                <path fill="url(#gradient)" d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex justify-end m-auto mr-6 relative top-64 mt-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
+                    <a href="https://www.instagram.com/jo_designes/" target="_blank">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                                <defs>
+                                    <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="12%" stop-color="#fb7185" />
+                                        <stop offset="50%" stop-color="#d946ef" />
+                                        <stop offset="90%" stop-color="#6366f1"/>
+                                    </linearGradient>
+                                </defs>
+                                <title>Instagram</title>
+                                <path fill="url(#gradient)" clip-rule="evenodd" d="M7.46494 1.066C8.63828 1.01222 9.01228 1 12 1C14.9883 1 15.3617 1.01283 16.5344 1.066C17.7059 1.11917 18.5059 1.30556 19.2056 1.5775C19.9395 1.85381 20.6043 2.28674 21.1538 2.84617C21.7133 3.3956 22.1463 4.06046 22.4225 4.79439C22.6944 5.49411 22.8802 6.29406 22.934 7.46494C22.9878 8.63828 23 9.01228 23 12C23 14.9877 22.9872 15.3617 22.934 16.5351C22.8808 17.7059 22.6944 18.5059 22.4225 19.2056C22.1414 19.9286 21.7649 20.5427 21.1538 21.1538C20.6044 21.7133 19.9395 22.1463 19.2056 22.4225C18.5059 22.6944 17.7059 22.8802 16.5351 22.934C15.3617 22.9878 14.9877 23 12 23C9.01228 23 8.63828 22.9872 7.46494 22.934C6.29406 22.8808 5.49411 22.6944 4.79439 22.4225C4.07144 22.1414 3.45728 21.7649 2.84617 21.1538C2.28664 20.6044 1.85368 19.9395 1.5775 19.2056C1.30556 18.5059 1.11978 17.7059 1.066 16.5351C1.01222 15.3617 1 14.9883 1 12C1 9.01167 1.01283 8.63828 1.066 7.46556C1.11917 6.29406 1.30556 5.49411 1.5775 4.79439C1.85381 4.06051 2.28674 3.39568 2.84617 2.84617C3.39559 2.28664 4.06045 1.85368 4.79439 1.5775C5.49411 1.30556 6.29406 1.11978 7.46494 1.066ZM16.4452 3.046C15.2853 2.99344 14.937 2.98183 12 2.98183C9.063 2.98183 8.71467 2.99344 7.55478 3.046C6.48228 3.09489 5.89989 3.27394 5.51244 3.42489C4.99911 3.62411 4.63244 3.86244 4.24744 4.24744C3.86306 4.63244 3.62411 4.99911 3.42489 5.51244C3.27394 5.89989 3.09489 6.48228 3.046 7.55478C2.99344 8.71467 2.98183 9.063 2.98183 12C2.98183 14.937 2.99344 15.2853 3.046 16.4452C3.09489 17.5177 3.27394 18.1001 3.42489 18.4876C3.60111 18.9654 3.88219 19.3976 4.24744 19.7526C4.60234 20.1178 5.03461 20.3989 5.51244 20.5751C5.89989 20.7261 6.48228 20.9051 7.55478 20.954C8.71467 21.0066 9.06239 21.0182 12 21.0182C14.9376 21.0182 15.2853 21.0066 16.4452 20.954C17.5177 20.9051 18.1001 20.7261 18.4876 20.5751C19.0009 20.3759 19.3676 20.1376 19.7526 19.7526C20.1178 19.3977 20.3989 18.9654 20.5751 18.4876C20.7261 18.1001 20.9051 17.5177 20.954 16.4452C21.0066 15.2853 21.0182 14.937 21.0182 12C21.0182 9.063 21.0066 8.71467 20.954 7.55478C20.9051 6.48228 20.7261 5.89989 20.5751 5.51244C20.3759 4.99911 20.1376 4.63244 19.7526 4.24744C19.3676 3.86306 19.0009 3.62411 18.4876 3.42489C18.1001 3.27394 17.5177 3.09489 16.4452 3.046ZM10.5955 15.3909C11.0408 15.5754 11.518 15.6703 12 15.6703C12.9735 15.6703 13.907 15.2836 14.5953 14.5953C15.2837 13.907 15.6704 12.9734 15.6704 12C15.6704 11.0266 15.2837 10.093 14.5953 9.40468C13.907 8.71636 12.9735 8.32966 12 8.32966C11.518 8.32966 11.0408 8.4246 10.5955 8.60905C10.1501 8.7935 9.74553 9.06385 9.40471 9.40468C9.06389 9.7455 8.79353 10.1501 8.60908 10.5954C8.42463 11.0407 8.3297 11.518 8.3297 12C8.3297 12.482 8.42463 12.9593 8.60908 13.4046C8.79353 13.8499 9.06389 14.2545 9.40471 14.5953C9.74553 14.9361 10.1501 15.2065 10.5955 15.3909ZM8.00205 8.00201C9.06238 6.94168 10.5005 6.34599 12 6.34599C13.4996 6.34599 14.9377 6.94168 15.998 8.00201C17.0583 9.06234 17.654 10.5005 17.654 12C17.654 13.4995 17.0583 14.9376 15.998 15.998C14.9377 17.0583 13.4996 17.654 12 17.654C10.5005 17.654 9.06238 17.0583 8.00205 15.998C6.94172 14.9376 6.34603 13.4995 6.34603 12C6.34603 10.5005 6.94172 9.06234 8.00205 8.00201ZM18.9077 7.18838C19.1583 6.93773 19.2991 6.59779 19.2991 6.24333C19.2991 5.88886 19.1583 5.54892 18.9077 5.29828C18.657 5.04764 18.3171 4.90683 17.9626 4.90683C17.6082 4.90683 17.2682 5.04764 17.0176 5.29828C16.7669 5.54892 16.6261 5.88886 16.6261 6.24333C16.6261 6.59779 16.7669 6.93773 17.0176 7.18838C17.2682 7.43902 17.6082 7.57983 17.9626 7.57983C18.3171 7.57983 18.657 7.43902 18.9077 7.18838Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex justify-end m-auto mr-6 relative top-64 mt-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer w-fit">
+                    <a href="https://github.com/juanico637" target="_blank">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 48 48">
+                                <defs>
+                                    <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="12%" stop-color="#fb7185" />
+                                        <stop offset="50%" stop-color="#d946ef" />
+                                        <stop offset="90%" stop-color="#6366f1"/>
+                                    </linearGradient>
+                                </defs>
+                                <title>Github</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                <g id="invisible_box" data-name="invisible box">
+                                    <rect width="48" height="48" fill="none"/>
+                                    <rect width="48" height="48" fill="none"/>
+                                </g>
+                                <g id="icons_Q2" data-name="icons Q2">
+                                    <path fill="url(#gradient)" d="M24,1.9a21.6,21.6,0,0,0-6.8,42.2c1,.2,1.8-.9,1.8-1.8V39.4c-6,1.3-7.9-2.9-7.9-2.9a6.5,6.5,0,0,0-2.2-3.2C6.9,31.9,9,32,9,32a4.3,4.3,0,0,1,3.3,2c1.7,2.9,5.5,2.6,6.7,2.1a5.4,5.4,0,0,1,.5-2.9C12.7,32,9,28,9,22.6A10.7,10.7,0,0,1,11.9,15a6.2,6.2,0,0,1,.3-6.4,8.9,8.9,0,0,1,6.4,2.9,15.1,15.1,0,0,1,5.4-.8,17.1,17.1,0,0,1,5.4.7,9,9,0,0,1,6.4-2.8,6.5,6.5,0,0,1,.4,6.4A10.7,10.7,0,0,1,39,22.6C39,28,35.3,32,28.5,33.2a5.4,5.4,0,0,1,.5,2.9v6.2a1.8,1.8,0,0,0,1.9,1.8A21.7,21.7,0,0,0,24,1.9Z"/>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- THIS IS THE LINE -->
-            <div class="line"></div>
-    </header>
+                <!-- THIS IS THE LINE -->
+                <div class="line"></div>
+            </section>
 
 
     <!-- ABOUT ME SECTION -->
-    <section class="mt-[29%] mb-[5%]">
+    <section id="about_me" data-name="about_me" class="mt-[29%] mb-[5%]">
         <div>
-            <div class="flex ml-48 mb-12 relative">
-                <div class="rounded-md py-2 text-[#FFF] w-[40%] bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-semibold text-3xl font-sans about-me">
-                    <h1 class="mt-4 m-auto flex justify-center">ABOUT ME</h1>
-                    <div class="mb-8">
-                        <p class="content w-fit text-[#FFF] text-base font-medium py-4 px-8">
-                            I am a  <strong class="text-fuchsia-950 font-mono"> Web / Mobile Designer </strong> and a <strong class="text-fuchsia-950 font-mono">Front-end Developer.</strong><br>
-                            Being a web and mobile designs has always been my passion. <br>
-                            <strong class="text-fuchsia-950 font-mono">Creating and developing </strong> designs that enable users to fully
-                            enjoy and experience a user-friendly applications and satisfy clients
-                            with interactive <br> design applications that they desire.
-                            <br>
-                            <br>
-                            I also enjoy <strong class="text-fuchsia-950 font-mono"> Photo & Video Editing </strong> which I've been
+            <div class="flex m-auto justify-center mb-12 relative">
+                <div class="rounded-md py-2 text-[#FFF] w-[80%] bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-semibold text-3xl font-sans about-me
+                transition-transform duration-300 transform hover:scale-105">
+                    <h1 class="mt-4 m-auto flex justify-center text-5xl font-bold text-center">ABOUT ME</h1>
+                    <div class="mb-8 mt-4 m-auto flex justify-center text-center">
+                        <p class="w-fit text-[#FFF] text-lg font-medium py-4 px-8 pb-36">
+                            I am a Web / Mobile Designer and a Front-end Developer.<br>
+                            Being a web and mobile designer has always been my passion.
+                            Creating and developing designs that enable users to fully
+                            enjoy and experience <br> user-friendly applications and satisfy clients
+                            with interactive design applications that they desire.
+                            <br><br>
+                            I also enjoy Photo & Video Editing, which I've been
                             doing for the past years.
                             <br><br>
-                            <strong class="text-fuchsia-950 font-mono">I love and enjoy </strong> exploring on various things which can
-                            help me enhance <br> my skills and being able to create more preeminent projects.
+                            I love and enjoy exploring various things that can
+                            help me enhance my skills and create more preeminent projects <br> and collaborate with
+                            talented people.
                         </p>
+                        <!-- <strong class="text-fuchsia-950 font-mono"></strong> -->
                     </div>
+                    
                 </div>
             </div>
         </div>
+        <div class="flex flex-col items-center -mt-[10%] justify-center space-y-5 text-center
+        transition-transform duration-1000 transform hover:scale-105">
+            <div class="flex justify-center relative">
+                <div class="bg-zinc-900 w-fit px-8 pb-12 rounded expertise-section">
+                    <div class="text-[#FFF] px-12 py-6 text-center font-bold text-5xl">
+                        <h1>MY EXPERTISE</h1>
+                    </div>
 
-        <div>
-            <div class="flex ml-48 mb-12 relative">
-                <div class="rounded-md py-2 text-[#FFF] w-[40%] bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-semibold text-3xl font-sans about-me">
+                    <!-- FRONTEND DEV -->
+                    <div class="flex justify-center space-x-8 text-center">
+                        <div class="border space-x-8 border-amber-50 px-8 py-2">
+                            <div class="flex items-center justify-center">
+                                <svg class="m-auto mt-2" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 32 32" xml:space="preserve">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="12%" stop-color="#fb7185" />
+                                            <stop offset="50%" stop-color="#d946ef" />
+                                            <stop offset="90%" stop-color="#6366f1"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#gradient)" id="design-and-development--02" d="M29,2.5C29,2.776,28.776,3,28.5,3S28,2.776,28,2.5S28.224,2,28.5,2S29,2.224,29,2.5z   M26.5,2C26.224,2,26,2.224,26,2.5S26.224,3,26.5,3S27,2.776,27,2.5S26.776,2,26.5,2z M24.5,2C24.224,2,24,2.224,24,2.5  S24.224,3,24.5,3S25,2.776,25,2.5S24.776,2,24.5,2z M10,14.36H4v-0.72h6V14.36z M14,11.36H4v-0.72h10V11.36z M14,8.36H4V7.64h10  V8.36z M31,31.36H1v-0.72h30V31.36z M31,28.36H1v-0.72h30V28.36z M31,25.36H1v-0.72h30V25.36z M31,22.36H1  c-0.199,0-0.36-0.161-0.36-0.36V1c0-0.199,0.161-0.36,0.36-0.36h30c0.199,0,0.36,0.161,0.36,0.36v21  C31.36,22.199,31.199,22.36,31,22.36z M1.36,21.64h29.28V4.36H1.36V21.64z M1.36,3.64h29.28V1.36H1.36V3.64z M24,15.36  c-2.404,0-4.36-1.956-4.36-4.36S21.596,6.64,24,6.64s4.36,1.956,4.36,4.36S26.404,15.36,24,15.36z M22.493,14.313  c0.46,0.209,0.97,0.327,1.507,0.327c2.007,0,3.64-1.633,3.64-3.64c0-0.539-0.117-1.051-0.328-1.511l-3.048,1.774L22.493,14.313z   M20.688,9.489c-0.21,0.46-0.328,0.972-0.328,1.511c0,1.213,0.596,2.29,1.511,2.951l1.637-2.821L20.688,9.489z M21.052,8.867  L24,10.583l2.948-1.716C26.286,7.955,25.211,7.36,24,7.36S21.714,7.955,21.052,8.867z"/>
+                                    <rect id="_Transparent_Rectangle" style="fill:none;" width="32" height="32"/>               
+                                </svg>
+                                <h2 class="text-amber-50 text-3xl font-mono mr-2">Front-end Dev</h2>
+                            </div>
+                            
+                            <p class="mt-2 text-lg relative text-amber-50 font-mono pb-4">
+                                Experienced in HTML, CSS,<br>  LARAVEL, REACT, and TAILWIND.
+                            </p>
+                        </div>
                     
+                        <!-- SOFTWARE DEV -->
+                        <div class="border border-amber-50 px-8 py-2">
+                            <div class="flex items-center justify-center">
+                                <svg class="m-auto mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="52px" height="52px" viewBox="0 0 419.931 419.931" xml:space="preserve">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="12%" stop-color="#fb7185" />
+                                            <stop offset="50%" stop-color="#d946ef" />
+                                            <stop offset="90%" stop-color="#6366f1"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path fill="url(#gradient)" d="M282.895,352.367c-2.176-1.324-4.072-3.099-5.579-5.25c-0.696-0.992-1.284-2.041-1.771-3.125H28.282V100.276h335.624     v159.138c7.165,0.647,13.177,5.353,15.701,11.797c2.235-1.225,4.726-1.982,7.344-2.213c1.771-0.154,3.53-0.044,5.236,0.293     V39.561c0-12.996-10.571-23.569-23.566-23.569H23.568C10.573,15.992,0,26.565,0,39.561v309.146     c0,12.996,10.573,23.568,23.568,23.568h257.179c-2.007-4.064-2.483-8.652-1.302-13.066     C280.126,356.67,281.304,354.354,282.895,352.367z M338.025,55.569c0-4.806,3.896-8.703,8.702-8.703h8.702     c4.807,0,8.702,3.896,8.702,8.703v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.702c-4.807,0-8.702-3.896-8.702-8.702V55.569z      M297.56,55.569c0-4.806,3.896-8.703,8.702-8.703h8.703c4.807,0,8.702,3.896,8.702,8.703v9.863c0,4.806-3.896,8.702-8.702,8.702     h-8.703c-4.806,0-8.702-3.896-8.702-8.702V55.569z M257.094,55.569c0-4.806,3.897-8.703,8.702-8.703h8.702     c4.807,0,8.703,3.896,8.703,8.703v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V55.569z"/>
+                                                <path fill="url(#gradient)" d="M419.875,335.77l-2.615-14.83c-0.353-1.997-2.256-3.331-4.255-2.979l-13.188,2.324c-1.583-3.715-3.605-7.195-6.005-10.38     l8.614-10.268c0.626-0.744,0.931-1.709,0.847-2.68c-0.086-0.971-0.554-1.867-1.3-2.494l-11.534-9.68     c-0.746-0.626-1.713-0.93-2.683-0.845c-0.971,0.085-1.867,0.552-2.493,1.298l-8.606,10.26c-3.533-1.8-7.312-3.188-11.271-4.104     v-13.392c0-2.028-1.645-3.674-3.673-3.674h-15.06c-2.027,0-3.673,1.646-3.673,3.674v13.392     c-3.961,0.915-7.736,2.304-11.271,4.104l-8.608-10.259c-1.304-1.554-3.62-1.756-5.175-0.453l-11.535,9.679     c-0.746,0.627-1.213,1.523-1.299,2.494c-0.084,0.971,0.22,1.937,0.846,2.683l8.615,10.266c-2.396,3.184-4.422,6.666-6.005,10.38     l-13.188-2.325c-1.994-0.351-3.901,0.982-4.255,2.979l-2.614,14.83c-0.169,0.959,0.05,1.945,0.607,2.744     c0.561,0.799,1.41,1.342,2.37,1.511l13.198,2.326c0.215,4.089,0.927,8.045,2.073,11.812l-11.6,6.695     c-0.844,0.485-1.459,1.289-1.712,2.229c-0.252,0.941-0.119,1.943,0.367,2.787l7.529,13.041c0.485,0.844,1.289,1.459,2.229,1.711     c0.313,0.084,0.632,0.125,0.951,0.125c0.639,0,1.272-0.166,1.836-0.492l11.609-6.703c2.73,2.925,5.812,5.517,9.18,7.709     l-4.584,12.593c-0.332,0.916-0.289,1.926,0.123,2.809s1.157,1.566,2.072,1.898l14.148,5.149c0.406,0.148,0.832,0.224,1.257,0.224     c0.53,0,1.063-0.115,1.554-0.345c0.883-0.411,1.564-1.157,1.897-2.073l4.583-12.593c1.965,0.238,3.965,0.361,5.994,0.361     s4.029-0.125,5.994-0.361l4.584,12.593c0.332,0.916,1.016,1.662,1.897,2.073c0.49,0.229,1.021,0.345,1.554,0.345     c0.424,0,0.85-0.074,1.256-0.224l14.15-5.149c0.913-0.332,1.659-1.017,2.07-1.898c0.412-0.883,0.456-1.893,0.123-2.809     l-4.584-12.591c3.365-2.192,6.447-4.786,9.18-7.709l11.609,6.703c0.563,0.324,1.197,0.492,1.836,0.492     c0.318,0,0.64-0.043,0.951-0.125c0.941-0.252,1.743-0.869,2.229-1.711l7.529-13.043c0.486-0.842,0.619-1.846,0.367-2.787     c-0.253-0.938-0.868-1.742-1.712-2.229l-11.598-6.693c1.146-3.768,1.856-7.724,2.071-11.812l13.198-2.327     c0.96-0.169,1.812-0.712,2.37-1.511C419.825,337.715,420.044,336.729,419.875,335.77z M354.184,359.336     c-11.155,0-20.2-9.045-20.2-20.201s9.046-20.2,20.2-20.2c11.156,0,20.201,9.044,20.201,20.2S365.34,359.336,354.184,359.336z"/>
+                                                <g>
+                                                    <path fill="url(#gradient)" d="M164.695,235.373c0-4.752-2.785-9.117-7.096-11.119l-39.455-18.332l39.456-18.334c4.31-2.004,7.095-6.368,7.095-11.118      v-0.319c0-4.21-2.119-8.075-5.665-10.334c-1.962-1.253-4.247-1.916-6.606-1.916c-1.778,0-3.563,0.391-5.16,1.133l-63.078,29.333      c-4.309,2.004-7.092,6.368-7.092,11.117v0.877c0,4.743,2.782,9.104,7.093,11.118l63.084,29.336      c1.631,0.755,3.368,1.138,5.162,1.138c2.338,0,4.616-0.664,6.597-1.924c3.548-2.268,5.666-6.13,5.666-10.335L164.695,235.373      L164.695,235.373z"/>
+                                                    <path fill="url(#gradient)" d="M226.932,134.012c-2.301-3.15-6.002-5.03-9.901-5.03h-0.314c-5.354,0-10.048,3.425-11.679,8.516L163.478,266.27      c-1.183,3.718-0.517,7.813,1.781,10.962c2.301,3.148,6.002,5.029,9.901,5.029h0.315c5.352,0,10.043-3.426,11.672-8.516      l41.555-128.762C229.896,141.268,229.234,137.167,226.932,134.012z"/>
+                                                    <path fill="url(#gradient)" d="M308.001,194.366l-63.079-29.333c-1.592-0.74-3.374-1.131-5.152-1.131c-2.358,0-4.644,0.661-6.605,1.912      c-3.552,2.263-5.671,6.127-5.671,10.337v0.319c0,4.746,2.783,9.111,7.097,11.123l39.454,18.33l-39.455,18.331      c-4.311,2.002-7.096,6.367-7.096,11.119v0.321c0,4.205,2.119,8.066,5.669,10.336c1.974,1.258,4.254,1.923,6.595,1.923      c1.792,0,3.527-0.383,5.169-1.141l63.082-29.336c4.307-2.009,7.088-6.371,7.088-11.114v-0.877      C315.094,200.735,312.311,196.371,308.001,194.366z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                <h1 class="text-amber-50 text-3xl font-mono">Software Dev</h1>
+                            </div>
+                            <p class="mt-2 text-lg relative text-amber-50 font-mono pb-4">
+                                Skilled in Python, JavaScript, <br> and C Language.
+                            </p>
+                        </div>
+
+                        <!-- DESIGN TOOLS -->
+                        <div>
+                            <div class="border border-amber-50 px-8 py-2">
+                                <div class="flex space-x-6 items-center ml-2 justify-center">
+                                    <svg class="m-auto mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="52px" height="52px" viewBox="0 0 419.931 419.931" xml:space="preserve">
+                                        <defs>
+                                            <linearGradient id="gradient" x1="60%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="12%" stop-color="#fb7185" />
+                                                <stop offset="50%" stop-color="#d946ef" />
+                                                <stop offset="90%" stop-color="#6366f1"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path fill="url(#gradient)" d="M282.895,352.367c-2.176-1.324-4.072-3.099-5.579-5.25c-0.696-0.992-1.284-2.041-1.771-3.125H28.282V100.276h335.624     v159.138c7.165,0.647,13.177,5.353,15.701,11.797c2.235-1.225,4.726-1.982,7.344-2.213c1.771-0.154,3.53-0.044,5.236,0.293     V39.561c0-12.996-10.571-23.569-23.566-23.569H23.568C10.573,15.992,0,26.565,0,39.561v309.146     c0,12.996,10.573,23.568,23.568,23.568h257.179c-2.007-4.064-2.483-8.652-1.302-13.066     C280.126,356.67,281.304,354.354,282.895,352.367z M338.025,55.569c0-4.806,3.896-8.703,8.702-8.703h8.702     c4.807,0,8.702,3.896,8.702,8.703v9.863c0,4.806-3.896,8.702-8.702,8.702h-8.702c-4.807,0-8.702-3.896-8.702-8.702V55.569z      M297.56,55.569c0-4.806,3.896-8.703,8.702-8.703h8.703c4.807,0,8.702,3.896,8.702,8.703v9.863c0,4.806-3.896,8.702-8.702,8.702     h-8.703c-4.806,0-8.702-3.896-8.702-8.702V55.569z M257.094,55.569c0-4.806,3.897-8.703,8.702-8.703h8.702     c4.807,0,8.703,3.896,8.703,8.703v9.863c0,4.806-3.896,8.702-8.703,8.702h-8.702c-4.805,0-8.702-3.896-8.702-8.702V55.569z"/>
+                                                    <path fill="url(#gradient)" d="M419.875,335.77l-2.615-14.83c-0.353-1.997-2.256-3.331-4.255-2.979l-13.188,2.324c-1.583-3.715-3.605-7.195-6.005-10.38     l8.614-10.268c0.626-0.744,0.931-1.709,0.847-2.68c-0.086-0.971-0.554-1.867-1.3-2.494l-11.534-9.68     c-0.746-0.626-1.713-0.93-2.683-0.845c-0.971,0.085-1.867,0.552-2.493,1.298l-8.606,10.26c-3.533-1.8-7.312-3.188-11.271-4.104     v-13.392c0-2.028-1.645-3.674-3.673-3.674h-15.06c-2.027,0-3.673,1.646-3.673,3.674v13.392     c-3.961,0.915-7.736,2.304-11.271,4.104l-8.608-10.259c-1.304-1.554-3.62-1.756-5.175-0.453l-11.535,9.679     c-0.746,0.627-1.213,1.523-1.299,2.494c-0.084,0.971,0.22,1.937,0.846,2.683l8.615,10.266c-2.396,3.184-4.422,6.666-6.005,10.38     l-13.188-2.325c-1.994-0.351-3.901,0.982-4.255,2.979l-2.614,14.83c-0.169,0.959,0.05,1.945,0.607,2.744     c0.561,0.799,1.41,1.342,2.37,1.511l13.198,2.326c0.215,4.089,0.927,8.045,2.073,11.812l-11.6,6.695     c-0.844,0.485-1.459,1.289-1.712,2.229c-0.252,0.941-0.119,1.943,0.367,2.787l7.529,13.041c0.485,0.844,1.289,1.459,2.229,1.711     c0.313,0.084,0.632,0.125,0.951,0.125c0.639,0,1.272-0.166,1.836-0.492l11.609-6.703c2.73,2.925,5.812,5.517,9.18,7.709     l-4.584,12.593c-0.332,0.916-0.289,1.926,0.123,2.809s1.157,1.566,2.072,1.898l14.148,5.149c0.406,0.148,0.832,0.224,1.257,0.224     c0.53,0,1.063-0.115,1.554-0.345c0.883-0.411,1.564-1.157,1.897-2.073l4.583-12.593c1.965,0.238,3.965,0.361,5.994,0.361     s4.029-0.125,5.994-0.361l4.584,12.593c0.332,0.916,1.016,1.662,1.897,2.073c0.49,0.229,1.021,0.345,1.554,0.345     c0.424,0,0.85-0.074,1.256-0.224l14.15-5.149c0.913-0.332,1.659-1.017,2.07-1.898c0.412-0.883,0.456-1.893,0.123-2.809     l-4.584-12.591c3.365-2.192,6.447-4.786,9.18-7.709l11.609,6.703c0.563,0.324,1.197,0.492,1.836,0.492     c0.318,0,0.64-0.043,0.951-0.125c0.941-0.252,1.743-0.869,2.229-1.711l7.529-13.043c0.486-0.842,0.619-1.846,0.367-2.787     c-0.253-0.938-0.868-1.742-1.712-2.229l-11.598-6.693c1.146-3.768,1.856-7.724,2.071-11.812l13.198-2.327     c0.96-0.169,1.812-0.712,2.37-1.511C419.825,337.715,420.044,336.729,419.875,335.77z M354.184,359.336     c-11.155,0-20.2-9.045-20.2-20.201s9.046-20.2,20.2-20.2c11.156,0,20.201,9.044,20.201,20.2S365.34,359.336,354.184,359.336z"/>
+                                                    <g>
+                                                        <path fill="url(#gradient)" d="M164.695,235.373c0-4.752-2.785-9.117-7.096-11.119l-39.455-18.332l39.456-18.334c4.31-2.004,7.095-6.368,7.095-11.118      v-0.319c0-4.21-2.119-8.075-5.665-10.334c-1.962-1.253-4.247-1.916-6.606-1.916c-1.778,0-3.563,0.391-5.16,1.133l-63.078,29.333      c-4.309,2.004-7.092,6.368-7.092,11.117v0.877c0,4.743,2.782,9.104,7.093,11.118l63.084,29.336      c1.631,0.755,3.368,1.138,5.162,1.138c2.338,0,4.616-0.664,6.597-1.924c3.548-2.268,5.666-6.13,5.666-10.335L164.695,235.373      L164.695,235.373z"/>
+                                                        <path fill="url(#gradient)" d="M226.932,134.012c-2.301-3.15-6.002-5.03-9.901-5.03h-0.314c-5.354,0-10.048,3.425-11.679,8.516L163.478,266.27      c-1.183,3.718-0.517,7.813,1.781,10.962c2.301,3.148,6.002,5.029,9.901,5.029h0.315c5.352,0,10.043-3.426,11.672-8.516      l41.555-128.762C229.896,141.268,229.234,137.167,226.932,134.012z"/>
+                                                        <path fill="url(#gradient)" d="M308.001,194.366l-63.079-29.333c-1.592-0.74-3.374-1.131-5.152-1.131c-2.358,0-4.644,0.661-6.605,1.912      c-3.552,2.263-5.671,6.127-5.671,10.337v0.319c0,4.746,2.783,9.111,7.097,11.123l39.454,18.33l-39.455,18.331      c-4.311,2.002-7.096,6.367-7.096,11.119v0.321c0,4.205,2.119,8.066,5.669,10.336c1.974,1.258,4.254,1.923,6.595,1.923      c1.792,0,3.527-0.383,5.169-1.141l63.082-29.336c4.307-2.009,7.088-6.371,7.088-11.114v-0.877      C315.094,200.735,312.311,196.371,308.001,194.366z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    <h1 class="text-amber-50 text-3xl font-mono">Design Tools</h1>
+                                </div>
+                                <p class="mt-2 text-lg relative text-amber-50 font-mono pb-4">
+                                    Proficient in Figma, Adobe XD,
+                                    <br>Adobe Express, and Canva,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>
     
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const expertiseSection = document.querySelector(".expertise-section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                expertiseSection.classList.add("animated");
+            }
+            });
+        });
+        
+        observer.observe(expertiseSection);
+        });
+        </script>
 
 
 </body>
